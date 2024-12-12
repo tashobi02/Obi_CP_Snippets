@@ -16,7 +16,7 @@ Competitive programming and DSA often require repeated use of commonly implement
 
 ## 🚀 **What's Inside?**
 
-The repository is neatly organized to make navigation effortless. Here's an overview of the categories:
+The repository is organized to make navigation effortless. Here's an overview of the categories:
 
 ### 🔧 **Data Structures**
 - Arrays
@@ -43,7 +43,7 @@ The repository is neatly organized to make navigation effortless. Here's an over
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/cp-dsa-snippets.git
+   git clone https://github.com/tashobi02/Obi_CP_Snippets.git
    ```
    
 2. **Navigate to the Desired Snippet:**
