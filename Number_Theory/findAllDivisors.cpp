@@ -19,12 +19,12 @@ void soln() {
         }
     }
     sort(divisors.begin(), divisors.end());
-    for (auto x : divs) cout << x << ' ';
+    for (auto x : divisors) cout << x << " ";
 }
 int main() {
     fast();
     lli t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--) soln();
 }
 // Author: tashobi_02 //

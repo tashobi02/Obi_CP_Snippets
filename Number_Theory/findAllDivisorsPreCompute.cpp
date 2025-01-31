@@ -8,10 +8,11 @@ void fast() {
 }
 // finding all divisors of a number in a optimized way
 // you can also pre-ccompute them upto 1e6
-vector<vector<lli>> divisors(1e6 + 1);
+const lli N = 1e6 + 10;
+vector<vector<lli>> divisors(N);
 void findAllDivisors() {
-    for (lli i = 1; i <= 1e6; i++) {
-        for (lli j = i; j <= 1e6; j += i) {
+    for (lli i = 1; i < N; i++) {
+        for (lli j = i; j < N; j += i) {
             divisors[j].push_back(i);
         }
     }
@@ -28,7 +29,7 @@ int main() {
     fast();
     findAllDivisors();
     lli t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--) soln();
 }
 // Author: tashobi_02 //

@@ -6,13 +6,12 @@ void fast() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
 }
-// pre-computing all prime numbers from 1 to N
-// Complexity O(Nloglog(N))
+// Precomputing all prime numbers from 1 to N
+// Complexity O(N log log N)
 const lli N = 1e7 + 10;
-bool isPrime[N];
-lli lp[N], hp[N];
+vector<bool> isPrime(N, true);
+vector<lli> lp(N, 0), hp(N, 0);
 void sievePrime() {
-    memset(isPrime, true, sizeof(isPrime));
     isPrime[0] = false, isPrime[1] = false;
     for (lli i = 2; i <= N; i++) {
         if (isPrime[i]) {
@@ -29,13 +28,13 @@ void sievePrime() {
 void soln() {
     lli n;
     cin >> n;
-    cout << isPrime[n] << enl;
+    cout << (isPrime[n] ? "YES" : "NO") << enl;
 }
 int main() {
     fast();
     sievePrime();
-    lli t = 1;
-    cin >> t;
+    lli t;
+    // cin >> t;
     while (t--) soln();
+    return 0;
 }
-// Author: tashobi_02 //

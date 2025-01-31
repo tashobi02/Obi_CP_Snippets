@@ -7,20 +7,26 @@ void fast() {
     cin.tie(0);
 }
 const lli N = 1e7 + 10;
-lli pF[N];
-// pre-computing all prime factors from 1 to N
-// Complexity O(Nlog(N))
+vector<lli> pF(N);
+// Precomputing all smallest prime factors from 1 to N
+// Complexity: **O(N log log N)**
 void primeFactor() {
-    for (lli i = 2; i < N; i++) pF[i] = i;
-    for (lli i = 2; i < N; i++)
-        for (lli j = i; j < N; j += i) pF[j] = min(pF[j], i);
+    iota(pF.begin(), pF.end(), 0);  // Fill pF[i] with i
+    for (lli i = 2; i * i < N; i++) {
+        if (pF[i] == i) {  // `i` is a prime
+            for (lli j = i * i; j < N; j += i) {
+                if (pF[j] == j)
+                    pF[j] = i;  // Mark smallest prime factor
+            }
+        }
+    }
 }
 void soln() {
     lli n;
     cin >> n;
     unordered_map<lli, lli> primeFactorization;
     while (n > 1) {
-        lli sp = pF[n];
+        lli sp = pF[n];  // Smallest prime factor
         primeFactorization[sp]++;
         n /= sp;
     }
@@ -32,8 +38,8 @@ void soln() {
 int main() {
     fast();
     primeFactor();
-    lli t = 1;
-    cin >> t;
+    lli t;
+    // cin >> t;
     while (t--) soln();
+    return 0;
 }
-// Author: tashobi_02 //
