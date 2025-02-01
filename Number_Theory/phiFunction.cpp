@@ -29,7 +29,7 @@ void soln() {
 int main() {
     fast();
     computeTotient();
-    lli t;
+    lli t = 1;
     // cin >> t;
     while (t--) soln();
     return 0;

@@ -33,7 +33,7 @@ void soln() {
 int main() {
     fast();
     sievePrime();
-    lli t;
+    lli t = 1;
     // cin >> t;
     while (t--) soln();
     return 0;
