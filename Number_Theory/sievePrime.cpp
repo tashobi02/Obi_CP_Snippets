@@ -10,12 +10,14 @@ void fast() {
 // Complexity O(N log log N)
 const lli N = 1e7 + 10;
 vector<bool> isPrime(N, true);
-vector<lli> lp(N, 0), hp(N, 0);
+vector<lli> primes;
+vector<lli> lp(N, 0), hp(N, 0);  // Remove these if space complexity occurs
 void sievePrime() {
     isPrime[0] = false, isPrime[1] = false;
     for (lli i = 2; i <= N; i++) {
         if (isPrime[i]) {
             lp[i] = i, hp[i] = i;
+            primes.push_back(i);
             for (lli j = i * 2; j <= N; j += i) {
                 isPrime[j] = false;
                 if (lp[j] == 0)
@@ -25,10 +27,24 @@ void sievePrime() {
         }
     }
 }
+bool isPrimeL(lli n) {
+    if (n < N)
+        return isPrime[n];
+    for (lli p : primes) {
+        if (p * p > n)
+            break;
+        if (n % p == 0)
+            return false;
+    }
+    return true;
+}
 void soln() {
     lli n;
     cin >> n;
-    cout << (isPrime[n] ? "YES" : "NO") << enl;
+    if (n > N)
+        cout << (isPrimeL(n) ? "YES" : "NO") << enl;
+    else
+        cout << (isPrime[n] ? "YES" : "NO") << enl;
 }
 int main() {
     fast();
