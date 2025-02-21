@@ -26,7 +26,7 @@ struct SegmentTree {
     }
     lli query(lli node, lli b, lli e, lli i, lli j) {
         if (b > j || e < i)
-            return -inf;
+            return 0;
         if (b >= i && e <= j)
             return st[node];
         lli mid = (b + e) / 2;

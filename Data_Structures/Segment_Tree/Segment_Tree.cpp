@@ -30,7 +30,7 @@ lli query(lli node, lli b, lli e, lli i, lli j) {
     if (b >= i && e <= j)
         return st[node];
     if (b > j || e < i)
-        return -inf;
+        return 0;
     lli mid = (b + e) / 2;
     return query(lc, b, mid, i, j) + query(rc, mid + 1, e, i, j);
 }
