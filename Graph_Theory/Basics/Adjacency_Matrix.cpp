@@ -26,7 +26,7 @@ void soln() {
 int main() {
     fast();
     lli t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--) soln();
 }
 // Author: tashobi_02 //
