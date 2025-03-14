@@ -6,7 +6,7 @@ void fast() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
 }
-const lli N = 1e5 + 10;
+const lli N = 2e5 + 10;
 vector<vector<lli>> graph(N);
 vector<bool> visited(N, false);
 vector<lli> discovery(N, 0), finishing(N, 0), parent(N, -1);
@@ -80,6 +80,7 @@ void soln() {
 int main() {
     fast();
     lli t = 1;
+    // cin >> t;
     while (t--) soln();
     return 0;
 }

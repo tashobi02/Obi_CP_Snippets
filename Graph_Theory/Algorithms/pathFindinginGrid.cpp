@@ -6,6 +6,9 @@ void fast() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
 }
+/* A (n*m) grid where you can traverse through if there are 0's and 1's
+are blocks, your job is to find if you can reach from top left to bottom right
+*/
 vector<lli> dx = {1, -1, 0, 0};
 vector<lli> dy = {0, 0, 1, -1};
 bool canReach(vector<vector<lli>> &grid) {

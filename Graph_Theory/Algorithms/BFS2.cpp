@@ -85,7 +85,6 @@ void soln() {
     cout << "Edges of BFS tree:" << enl;
     for (auto edge : BFSTree) cout << edge.first << " " << edge.second << enl;
 }
-
 int main() {
     fast();
     lli t = 1;
