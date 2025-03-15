@@ -66,4 +66,3 @@ The repository is carefully organized into categories for easy navigation:
 ---
 
 Happy Coding! 🚀
-
