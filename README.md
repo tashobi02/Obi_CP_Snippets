@@ -1,6 +1,6 @@
 # **Competitive Programming and Data Structures & Algorithms (DSA) Snippets**
 
-Welcome to the **CP & DSA Snippets** repository! 🎯 Your one-stop hub for optimized, reusable, and well-documented code snippets to make your competitive programming journey smoother and more efficient.
+Welcome to the **CP & DSA Snippets** repository! 🎯 Your one-stop hub for optimized, reusable, and well-documented code snippets to make your competitive programming and problem solving journey smoother and more efficient.
 
 ---
 
@@ -22,34 +22,29 @@ The repository is carefully organized into categories for easy navigation:
 - **Stack**
 - **Queue, Deque, Priority Queue, and Heap**
 - **Linked Lists**
-- **Binary Trees, Binary Search Trees, AVL, and Red-Black Trees**
+- **Binary Trees, Binary Search Trees, and AVL Trees**
 - **Segment Trees**
 - **Binary Indexed Trees**
 - **Hashing**
 - **Trie**
 - **Sparse Table**
 - **Disjoint Set Union**
-- **SQRT Decomposition**
 - *(More to come!)*
 
 ### 📐 **Algorithms**
-- **Sorting Algorithms:** Merge Sort, Quick Sort, etc.
 - **Searching Techniques:** Binary Search, Ternary Search, etc.
 - **Graph Algorithms:** DFS, BFS, Dijkstra, etc.
 - **String Algorithms:** KMP, Z Algorithm, etc.
-- **Number Theoretic Algorithms**
 - *(More to come!)*
 
 ### 🧮 **Math**
 - **Number Theory**
 - **Combinatorics**
 - **Geometry**
-- **FFT** 
-- **Linear Algebra**
+
 
 ### 💡 **Utilities**
 - **Standard Template Library (STL) in C++**
-- **Modular Arithmetic**
 - **Fast I/O Templates**
 - *(More to come!)*
 
