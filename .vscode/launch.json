@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/obidi/Desktop/Codes/Obi's Snippets/Obi_CP_Snippets",
-      "program": "c:/Users/obidi/Desktop/Codes/Obi's Snippets/Obi_CP_Snippets/build/Debug/outDebug",
+      "cwd": "c:/ShDesktop/Codes/Obi's Snippets/Obi_CP_Snippets/Dynamic_Programming/0",
+      "program": "c:/ShDesktop/Codes/Obi's Snippets/Obi_CP_Snippets/Dynamic_Programming/0/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
