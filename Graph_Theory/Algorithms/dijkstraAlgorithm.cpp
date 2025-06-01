@@ -8,8 +8,11 @@ void fast() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
 }
-
-void dijkstra(lli start, vector<lli> &dist) {
+vector<vector<pair<lli, lli>>> graph(N);  // {node, weight}
+vector<lli> dist(N + 1, INF);
+priority_queue<pair<lli, lli>, vector<pair<lli, lli>>, greater<pair<lli, lli>>>
+    pq;
+void dijkstra(lli start) {
     dist[start] = 0;
     pq.push({0, start});
     while (!pq.empty()) {
