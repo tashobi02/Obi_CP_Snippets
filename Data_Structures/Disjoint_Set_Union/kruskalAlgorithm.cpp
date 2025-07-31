@@ -42,7 +42,11 @@ lli KruskalsMST(lli v, vector<vector<lli>>& edges) {
     for (auto& e : edges) {
         lli u = e[0], vv = e[1], w = e[2];
         if (find(u) != find(vv)) {
+            for (lli i = 0; i <= v; i++)
+                cout << parent[i] << " ";
+            cout << enl;
             Union(u, vv);
+            cout << u << " " << vv << enl;
             cost += w;
             ct++;
             if (ct == v - 1)
@@ -66,6 +70,9 @@ int main() {
         edges.push_back({u, vv, w});
     }
     lli cost = KruskalsMST(v, edges);
+    for (lli i = 0; i <= v; i++)
+        cout << parent[i] << " ";
+    cout << enl;
     if (cost == -1)
         cout << "IMPOSSIBLE" << enl;
     else
