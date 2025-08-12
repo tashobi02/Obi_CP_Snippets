@@ -6,6 +6,9 @@ void fast() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
 }
+/* Given K variables, a1,a2,a3…aK and a value N,
+ how many ways can we write a1+a2+a3…aK=N,
+ where a1,a2,a3…aK are non-negative integers? */
 const lli N = 2e6 + 10;
 const lli MOD = 1e9 + 7;
 lli factorial[N], inverseFactorial[N], modInverse[N];
@@ -35,11 +38,10 @@ lli nPr(lli n, lli r) {
         return 0;
     return (1LL * nCr(n, r) * factorial[r] % MOD);
 }
-
 void soln() {
-    lli n, r;
-    cin >> n >> r;
-    cout << nCr(n, r) << enl;
+    lli n, k;
+    cin >> n >> k;
+    cout << nCr(n + k - 1, k - 1) << enl;
 }
 int main() {
     fast();
