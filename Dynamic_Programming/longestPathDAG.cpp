@@ -7,7 +7,7 @@ void fast() {
     cin.tie(0);
 }
 const lli N = 2e6 + 10;
-vector<lli> graph[N];
+vector<vector<lli>> graph(N);
 lli dp[N];
 lli lp(lli u) {
     if (dp[u] != -1) {
