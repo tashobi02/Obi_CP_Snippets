@@ -8,21 +8,21 @@ void fast() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
 }
-vector<tuple<lli, lli, lli>> edges;  // {u, v, weight}
+vector<tuple<lli, lli, lli>> edges; // {u, v, weight}
 vector<lli> dist(N + 1, INF);
 bool bellmanFord(lli n, lli start) {
     dist[start] = 0;
     for (lli i = 1; i < n; i++) {
-        for (auto &[u, v, w] : edges) {
+        for (auto& [u, v, w] : edges) {
             if (dist[u] != INF && dist[u] + w < dist[v]) {
                 dist[v] = dist[u] + w;
             }
         }
     }
     // Detect negative cycle
-    for (auto &[u, v, w] : edges) {
+    for (auto& [u, v, w] : edges) {
         if (dist[u] != INF && dist[u] + w < dist[v]) {
-            return false;  // Negative cycle found
+            return false; // Negative cycle found
         }
     }
     return true;
@@ -37,7 +37,7 @@ void soln() {
         cin >> u >> v >> w;
         edges.push_back({u, v, w});
     }
-    lli start = 1;  // default starting node
+    lli start = 1; // default starting node
     if (bellmanFord(n, start)) {
         for (lli i = 1; i <= n; i++) {
             if (dist[i] != INF)
@@ -52,7 +52,8 @@ int main() {
     fast();
     lli t = 1;
     // cin >> t;
-    while (t--) soln();
+    while (t--)
+        soln();
 }
 
 // Author: tashobi_02 //
