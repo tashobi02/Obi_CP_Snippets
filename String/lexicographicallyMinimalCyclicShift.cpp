@@ -6,6 +6,7 @@ void fast() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
 }
+string s;
 const lli N = 2e6 + 10;
 const lli p1 = 137, mod1 = 127657753;
 const lli p2 = 277, mod2 = 987654319;
@@ -65,7 +66,7 @@ pair<lli, lli> getHash(lli i, lli j) {
 lli lcp(lli i, lli j, lli x, lli y) {
     lli l = 1, r = min(j - i + 1, y - x + 1), ans = 0;
     while (l <= r) {
-        lli mid = l + r >> 1;
+        lli mid = (l + r) >> 1LL;
         if (getHash(i, i + mid - 1) == getHash(x, x + mid - 1)) {
             ans = mid;
             l = mid + 1;
@@ -75,25 +76,37 @@ lli lcp(lli i, lli j, lli x, lli y) {
     }
     return ans;
 }
+lli compare(lli i, lli j, lli x, lli y) {
+    lli lc = lcp(i, j, x, y);
+    lli len1 = j - i + 1, len2 = y - x + 1;
+    if (len1 == len2 && lc == len1)
+        return 0;
+    else if (lc == len1)
+        return -1;
+    else if (lc == len2)
+        return 1;
+    else
+        return (s[i + lc] < s[x + lc] ? -1 : 1);
+}
 void soln() {
-    string s;
-    lli q;
-    cin >> s >> q;
+    cin >> s;
+    lli n = s.size();
+    s += s;
     build(s);
-    while (q--) {
-        lli i, j, x, y;
-        cin >> i >> j >> x >> y;
-        // Adjust for 0-based indexing
-        i--, j--, x--, y--;
-        lli ans = lcp(s, i, j, x, y);
-        cout << ans << enl;
+    lli mni = 0, mnj = n - 1;
+    for (lli i = 1; i < n; i++) {
+        lli x = compare(mni, mnj, i, i + n - 1);
+        if (x == 1) {
+            mni = i, mnj = i + n - 1;
+        }
     }
+    cout << s.substr(mni, n) << enl;
 }
 int main() {
     fast();
     preCalculate();
     lli t = 1;
-    // cin >> t;  // Uncomment this line for multiple test cases
+    // cin >> t;
     while (t--)
         soln();
 }

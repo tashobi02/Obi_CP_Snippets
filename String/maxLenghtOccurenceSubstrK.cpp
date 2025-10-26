@@ -62,38 +62,42 @@ pair<lli, lli> getHash(lli i, lli j) {
     hs.second = hs.second * ipw[i].second % mod2;
     return hs;
 }
-lli lcp(lli i, lli j, lli x, lli y) {
-    lli l = 1, r = min(j - i + 1, y - x + 1), ans = 0;
+lli n;
+lli maxLength(lli len) {
+    map<pair<lli, lli>, lli> mp;
+    for (lli i = 0; i + len - 1LL < n; i++) {
+        mp[getHash(i, i + len - 1)]++;
+    }
+    lli ans = 0;
+    for (auto [x, y] : mp) {
+        ans = max(ans, y);
+    }
+    return ans;
+}
+void soln() {
+    string s;
+    cin >> s;
+    build(s);
+    lli k;
+    cin >> k;
+    n = s.size();
+    lli l = 1, r = n, ans = -1;
     while (l <= r) {
-        lli mid = l + r >> 1;
-        if (getHash(i, i + mid - 1) == getHash(x, x + mid - 1)) {
+        lli mid = (l + r) >> 1LL;
+        if (maxLength(mid) >= k) {
             ans = mid;
             l = mid + 1;
         } else {
             r = mid - 1;
         }
     }
-    return ans;
-}
-void soln() {
-    string s;
-    lli q;
-    cin >> s >> q;
-    build(s);
-    while (q--) {
-        lli i, j, x, y;
-        cin >> i >> j >> x >> y;
-        // Adjust for 0-based indexing
-        i--, j--, x--, y--;
-        lli ans = lcp(s, i, j, x, y);
-        cout << ans << enl;
-    }
+    cout << ans << enl;
 }
 int main() {
     fast();
     preCalculate();
     lli t = 1;
-    // cin >> t;  // Uncomment this line for multiple test cases
+    // cin >> t;
     while (t--)
         soln();
 }
