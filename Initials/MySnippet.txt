@@ -1,0 +1,155 @@
+{
+	"Obi_CP": {
+		"prefix": "Obi_CP",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"typedef long long int lli;",
+			"#define enl \"\\n\"",
+			"void fast() {",
+			"    ios_base::sync_with_stdio(false);",
+			"    cin.tie(0);",
+			"}",
+			"void soln() {}",
+			"int main() {",
+			"    fast();",
+			"    lli t = 1;",
+			"    cin >> t;",
+			"    while (t--) soln();",
+			"}",
+			"// Author: tashobi_02 //"
+		],
+		"description": "Competitive Programming Template by tashobi_02"
+	},
+	"py": {
+		"prefix": "py",
+		"body": [
+			"cout << \"YES\" << enl;"
+		],
+		"description": "Print YES to console"
+	},
+	"pn": {
+		"prefix": "pn",
+		"body": [
+			"cout << \"NO\" << enl;"
+		],
+		"description": "Print NO to console"
+	},
+	"CASES": {
+		"prefix": "CASES",
+		"body": [
+			"lli t = 1;",
+			"lli ti = 1;",
+			"cin >> t;",
+			"while (t--) {",
+			"    cout << \"Case \" << ti++ << \": \";",
+			"    soln();",
+			"}"
+		],
+		"description": "Loop through test cases and call soln()"
+	},
+	"fori": {
+		"prefix": "fori",
+		"body": [
+			"for(lli i = 0; i < n; i++)"
+		],
+		"description": "For loop from 0 to n-1"
+	},
+	"forj": {
+		"prefix": "forj",
+		"body": [
+			"for(lli j = 0; j < m; j++)"
+		],
+		"description": "For loop from 0 to m-1"
+	},
+	"forv": {
+		"prefix": "forv",
+		"body": [
+			"vector<lli> arr(n);",
+			"for(lli i = 0; i < n; i++) cin >> arr[i];"
+		],
+		"description": "Vector input loop"
+	},
+	"forvj": {
+		"prefix": "forvj",
+		"body": [
+			"for(lli i = 0; i < n; i++) {",
+			"    for(lli j = 0; j < m; j++) {",
+			"        cin >> arr[i][j];",
+			"    }",
+			"}"
+		],
+		"description": "2D vector input loop"
+	},
+	"vi": {
+		"prefix": "vi",
+		"body": [
+			"vector<lli> arr(n);"
+		],
+		"description": "Vector of long long ints"
+	},
+	"ld": {
+		"prefix": "ld",
+		"body": [
+			"long double y;"
+		],
+		"description": "Long double variable"
+	},
+	"pi": {
+		"prefix": "pi",
+		"body": [
+			"pair<lli, lli> pll;"
+		],
+		"description": "Pair of long long ints"
+	},
+	"grid": {
+		"prefix": "grid",
+		"body": [
+			"vector<vector<lli>> mat(n, vector<lli>(m));"
+		],
+		"description": "2D vector (grid) declaration"
+	},
+	"infinity": {
+		"prefix": "infinity",
+		"body": [
+			"const lli inf = LLONG_MAX;"
+		],
+		"description": "Infinity constant"
+	},
+	"MOD": {
+		"prefix": "MOD",
+		"body": [
+			"const lli MOD = 1e9 + 7;"
+		],
+		"description": "Modulus constant"
+	},
+	"SORT": {
+		"prefix": "SORT",
+		"body": [
+			"sort(arr.begin(), arr.end());"
+		],
+		"description": "Sort vector in ascending order"
+	},
+	"RSORT": {
+		"prefix": "RSORT",
+		"body": [
+			"sort(arr.rbegin(), arr.rend());"
+		],
+		"description": "Sort vector in descending order"
+	},
+	"ANS": {
+		"prefix": "ANS",
+		"body": [
+			"cout << ans << enl;"
+		],
+		"description": "Print ans with newline"
+	},
+	"forvout": {
+		"prefix": "forvout",
+		"body": [
+			"for(lli i = 0; i < n; i++) cout << arr[i] << \" \";",
+			"cout << enl;"
+		],
+		"description": "Print vector elements with space and newline"
+	}
+}
